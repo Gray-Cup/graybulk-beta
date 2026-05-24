@@ -86,7 +86,7 @@ function PricingCard({
 const tiers: Tier[] = [
   {
     name: "Vibe",
-    price: "$30",
+    price: "₹30",
     cta: "Vibe with Us",
     ctaVariant: "primary",
     features: [
@@ -100,7 +100,7 @@ const tiers: Tier[] = [
   },
   {
     name: "Cracked",
-    price: "$150",
+    price: "₹150",
     cta: "Go Nuts Here",
     ctaVariant: "primary",
     features: [
@@ -114,7 +114,7 @@ const tiers: Tier[] = [
   },
   {
     name: "Startups",
-    price: "$300",
+    price: "₹300",
     cta: "Grow Your Startup",
     features: [
       "Unlimited Customer Agents + 1GB of Context",
@@ -127,7 +127,7 @@ const tiers: Tier[] = [
   },
   {
     name: "Companies",
-    price: "$900",
+    price: "₹900",
     cta: "Unify Your Company",
     ctaVariant: "primary",
     features: [
@@ -173,7 +173,7 @@ export default function PricingPage() {
                     <div className="mb-6 flex flex-col gap-2">
                       <div className="flex items-center gap-2">
                         <span className="text-4xl leading-none tracking-[-0.15rem] tabular-nums">
-                          $2
+                          ₹2
                         </span>
                       </div>
                       <CardDescription className="text-xs text-muted-foreground">
