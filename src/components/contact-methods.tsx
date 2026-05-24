@@ -15,7 +15,7 @@ export default function ContactMethod() {
           Join our Discord
         </a>
         <a
-          href="https://x.com/ColdranAI"
+          href="https://x.com/Gray BulkAI"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white rounded-lg hover:bg-neutral-800 transition-colors"

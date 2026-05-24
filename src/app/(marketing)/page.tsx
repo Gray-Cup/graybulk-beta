@@ -49,7 +49,7 @@ export default function Home() {
           <div>
             <div>
               <span className="mb-4 sm:ml-4 text-sm font-semibold text-neutral-600">
-                Coldran Beta
+                Gray Bulk Beta
               </span>
               <h1 className="relative text-black text-3xl sm:text-5xl lg:text-6xl font-medium sm:leading-[60px] lg:leading-[77px]">
                 Collect, Analyze,
@@ -99,7 +99,7 @@ export default function Home() {
             <PRIssues />
           </div>
             <h2 className="text-2xl sm:text-5xl font-medium text-neutral-900 mb-6 font-instrument-sans">
-              Coldran Narrative
+              Gray Bulk Narrative
             </h2>
             <p className="text-md sm:text-xl mb-10 text-neutral-700 my-4 max-w-2xl">
               Allow the customers to have autonomy to get help with bugs,

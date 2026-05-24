@@ -142,7 +142,7 @@ async function sendWebhook(
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "User-Agent": "Coldran-Contact-Form/1.0",
+        "User-Agent": "Gray Bulk-Contact-Form/1.0",
       },
       body: JSON.stringify({
         type: "contact_form_submission",

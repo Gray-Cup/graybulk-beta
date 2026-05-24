@@ -4,13 +4,13 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "About | Coldran",
+  title: "About | Gray Bulk",
   description:
-    "Coldran helps product teams collect, analyze, and act on customer feedback using AI agents. Built by Arjun Aditya.",
+    "Gray Bulk helps product teams collect, analyze, and act on customer feedback using AI agents. Built by Arjun Aditya.",
   openGraph: {
-    title: "About | Coldran",
+    title: "About | Gray Bulk",
     description:
-      "Coldran helps product teams collect, analyze, and act on customer feedback using AI agents.",
+      "Gray Bulk helps product teams collect, analyze, and act on customer feedback using AI agents.",
   },
 };
 
@@ -25,14 +25,14 @@ export default function AboutPage() {
 
       <div className="space-y-6 text-lg text-neutral-700">
         <p>
-          Coldran is a customer intelligence platform built to help product
+          Gray Bulk is a customer intelligence platform built to help product
           teams stop guessing what their users want. We collect feedback from
           wherever customers already are — Discord, Slack, email, your website
           — and surface what actually matters.
         </p>
         <p>
           Most feedback tools are passive. They wait for customers to fill out
-          a form. Coldran uses AI agents to actively gather, classify, and
+          a form. Gray Bulk uses AI agents to actively gather, classify, and
           synthesize feedback into a knowledge base your whole team can act on.
           Bugs become GitHub issues. Feature requests get triaged. Patterns
           emerge before they become churn.

@@ -3,13 +3,13 @@ import { Metadata } from "next";
 import ContactMethod from "@/components/contact-methods";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Coldran",
+  title: "Contact Us - Gray Bulk",
   description:
-    "Get in touch with Coldran to transform your customer feedback into actionable insights. Contact our team to discuss your business needs.",
+    "Get in touch with Gray Bulk to transform your customer feedback into actionable insights. Contact our team to discuss your business needs.",
   openGraph: {
-    title: "Contact Us - Coldran",
+    title: "Contact Us - Gray Bulk",
     description:
-      "Get in touch with Coldran to transform your customer feedback into actionable insights.",
+      "Get in touch with Gray Bulk to transform your customer feedback into actionable insights.",
     type: "website",
   },
 };

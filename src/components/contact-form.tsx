@@ -168,7 +168,7 @@ export function ContactForm() {
         </CardTitle>
         <CardDescription className="text-gray-600">
           Ready to transform your customer feedback into actionable insights?
-          Let's discuss how Coldran can help your business grow.
+          Let's discuss how Gray Bulk can help your business grow.
         </CardDescription>
       </CardHeader>
       <CardContent className="bg-white">
@@ -296,7 +296,7 @@ export function ContactForm() {
               className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent transition-colors resize-vertical bg-white ${
                 errors.message ? "border-red-300 bg-red-50" : "border-gray-300"
               }`}
-              placeholder="Tell us about your business needs, current challenges with customer feedback, or any specific questions about Coldran..."
+              placeholder="Tell us about your business needs, current challenges with customer feedback, or any specific questions about Gray Bulk..."
               disabled={submissionState === "submitting"}
             />
             {errors.message && (

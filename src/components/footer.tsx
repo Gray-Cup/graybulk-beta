@@ -1,4 +1,4 @@
-import ColdranLogo from "./ColdranLogo";
+import Gray BulkLogo from "./Gray BulkLogo";
 import Link from "next/link";
 
 export default function Footer() {
@@ -7,8 +7,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 lg:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <ColdranLogo className="w-12 h-12 animate-fadeIn delay-0" />
-            <h3 className="font-semibold text-lg mb-1.5 mt-4">Coldran</h3>
+            <Gray BulkLogo className="w-12 h-12 animate-fadeIn delay-0" />
+            <h3 className="font-semibold text-lg mb-1.5 mt-4">Gray Bulk</h3>
             <p className="text-muted-foreground text-sm">
               Perfect Combination of Scanning, Customer Experience and Knowledge
               Base.
@@ -43,7 +43,7 @@ export default function Footer() {
             <ul className="space-y-2 text-md">
               <li>
                 <Link
-                  href="https://x.com/ColdranAI"
+                  href="https://x.com/Gray BulkAI"
                   target="_blank"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -52,7 +52,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://github.com/ColdranAI"
+                  href="https://github.com/Gray BulkAI"
                   target="_blank"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -93,7 +93,7 @@ export default function Footer() {
             </div> */}
         </div>
         <div className="mt-10 pt-6 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Coldran. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Gray Bulk. All rights reserved.</p>
         </div>
       </div>
     </footer>

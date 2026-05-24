@@ -2,13 +2,13 @@ import { ContactForm } from "@/components/contact-form";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Coldran",
+  title: "Contact Us - Gray Bulk",
   description:
-    "Get in touch with Coldran to transform your customer feedback into actionable insights. Contact our team to discuss your business needs.",
+    "Get in touch with Gray Bulk to transform your customer feedback into actionable insights. Contact our team to discuss your business needs.",
   openGraph: {
-    title: "Contact Us - Coldran",
+    title: "Contact Us - Gray Bulk",
     description:
-      "Get in touch with Coldran to transform your customer feedback into actionable insights.",
+      "Get in touch with Gray Bulk to transform your customer feedback into actionable insights.",
     type: "website",
   },
 };
@@ -47,7 +47,7 @@ export default function ContactPage() {
               Join our Discord
             </a>
             <a
-              href="https://x.com/ColdranAI"
+              href="https://x.com/Gray BulkAI"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white rounded-lg hover:bg-neutral-800 transition-colors"
