@@ -28,7 +28,7 @@ export async function POST(request: Request) {
       embeds: [
         {
           title: "🚀 New Feature Request",
-          color: 3447003, // Blue color
+          color: 3447003, // primary color
           fields: [
             {
               name: "Feature Request",

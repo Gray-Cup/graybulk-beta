@@ -21,8 +21,8 @@ const calloutConfig = {
   info: {
     icon: Info,
     className:
-      "border-blue-200 bg-blue-50 text-blue-900 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-100",
-    iconClassName: "text-blue-600 dark:text-blue-400",
+      "border-primary-200 bg-primary-50 text-primary-900 dark:border-primary-800 dark:bg-primary-950 dark:text-primary-100",
+    iconClassName: "text-primary-600 dark:text-primary-400",
   },
   warning: {
     icon: AlertTriangle,

@@ -129,7 +129,7 @@ export function Navbar() {
             <>
               {/* Internal route: use Link + asChild so it doesn't flash a reload */}
               <Link href="/play-with-us" className="inline-block">
-                <Button variant="lightgray" size="sm">
+                <Button variant="secondary" size="sm">
                   Play with Us
                 </Button>
               </Link>
@@ -141,17 +141,8 @@ export function Navbar() {
                 rel="dofollow noopener"
                 id="sign-in-link"
               >
-                <Button variant="blue" size="sm">
-                  Sign In{" "}
-                  <kbd
-                    className="max-sm:hidden font-medium text-[11px] px-1.5 py-0.5 rounded-sm border border-neutral-700 bg-neutral-800 cursor-pointer"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      document.getElementById("sign-in-link")?.click();
-                    }}
-                  >
-                    B
-                  </kbd>
+                <Button variant="primary" size="sm">
+                  Sign In
                 </Button>
               </a>
             </>

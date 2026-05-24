@@ -24,13 +24,13 @@ export default function NotFound() {
             This page doesn't exist but you should play with our features.
           </p>
           <div className="flex justify-center items-center gap-4">
-            <Button variant="lightgray" size="lg">
+            <Button variant="secondary" size="lg">
               <Link href="/" className="flex items-center gap-2">
                 <ArrowLeft className="h-5 w-5" />
                 Back to Home
               </Link>
             </Button>
-            <Button variant="blue" size="lg">
+            <Button variant="primary" size="lg">
               <Link href="/" className="flex items-center gap-2">
                 Play with Us
                 <ArrowRight className="h-5 w-5" />

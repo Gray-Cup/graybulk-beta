@@ -69,7 +69,7 @@ export default function Home() {
             <div className="flex relative mt-10 flex-col max:smml-4 ">
               <div>
                 <a href="https://app.coldran.com" target="_blank">
-                  <Button variant="blue" size="lg" className="">
+                  <Button variant="primary" size="lg" className="">
                     Get started
                   </Button>
                 </a>
@@ -126,7 +126,7 @@ export default function Home() {
             <Button variant="default" size="lg">
               Build Your Survey
             </Button>
-            <Button variant="blue" size="lg">
+            <Button variant="primary" size="lg">
               Visual Bug Reporting in IDE
             </Button>
             <Button variant="red" size="lg">
@@ -138,7 +138,7 @@ export default function Home() {
             <Button variant="red" size="lg">
               Slack Scraper Agent
             </Button>
-            <Button variant="blue" size="lg">
+            <Button variant="primary" size="lg">
               Run Surveys & Deep Research
             </Button>
             <Button variant="default" size="lg">
@@ -147,19 +147,19 @@ export default function Home() {
             <Button variant="red" size="lg">
               Discord Scraper Agent
             </Button>
-            <Button variant="blue" size="lg">
+            <Button variant="primary" size="lg">
               IDE Customer Agents
             </Button>
             <Button variant="red" size="lg">
               Transcribe & Analyze Customer Calls
             </Button>
-            <Button variant="blue" size="lg">
+            <Button variant="primary" size="lg">
               Customer Feedback Classification
             </Button>
             <Button variant="red" size="lg">
               Automatically Trigger Issues
             </Button>
-            <Button variant="blue" size="lg">
+            <Button variant="primary" size="lg">
               Integrate with Zapier, Airtable, Notion, Github, Gitlab, Jira,
               etc.
             </Button>
@@ -175,16 +175,16 @@ export default function Home() {
             <Button variant="red" size="lg">
               Create A Roadmap Page
             </Button>
-            <Button variant="blue" size="lg">
+            <Button variant="primary" size="lg">
               Create a Help & Support Page
             </Button>
             <Button variant="red" size="lg">
               Screen Record The Bug using Widget
             </Button>
-            <Button variant="blue" size="lg">
+            <Button variant="primary" size="lg">
               Component Behavior Reporting via Web
             </Button>
-            <Button variant="blue" size="lg">
+            <Button variant="primary" size="lg">
               Whatsapp & Instagram Agents
             </Button>
           </div>

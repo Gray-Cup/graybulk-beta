@@ -124,7 +124,7 @@ export default function PrivacyPolicy() {
           through our Discord server or via{" "}
           <a
             href="mailto:meow@nermalcat69.com"
-            className="text-blue-700 underline"
+            className="text-primary-700 underline"
           >
             meow@nermalcat69.com
           </a>

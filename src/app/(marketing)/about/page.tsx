@@ -102,7 +102,7 @@ export default function AboutPage() {
 
       <div className="flex flex-col sm:flex-row gap-4">
         <a href="https://app.coldran.com" target="_blank">
-          <Button variant="blue" size="lg">
+          <Button variant="primary" size="lg">
             Get started
           </Button>
         </a>

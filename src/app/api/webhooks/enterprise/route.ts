@@ -42,7 +42,7 @@ export async function POST(request: Request) {
       embeds: [
         {
           title: "🏢 New Enterprise Inquiry",
-          color: 5814783, // Deep blue color for enterprise
+          color: 5814783, // Deep primary color for enterprise
           fields: [
             {
               name: "🏢 Company Information",

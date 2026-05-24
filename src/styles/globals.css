@@ -165,13 +165,13 @@
   transition: box-shadow 0.2s ease;
 }
 
-.blueshadow {
+.primaryshadow {
   box-shadow: 0px 6px #a259ff;
   cursor: pointer;
   transition: box-shadow 0.2s ease;
 }
 
-.blueshadow:active {
+.primaryshadow:active {
   transform: translateY(2px);
   transition: transform 0.3s ease;
   box-shadow: 0px 2px #a259ff;
@@ -204,13 +204,13 @@
   transition: box-shadow 0.2s ease;
 }
 
-.lightgrayshadow {
+.secondaryshadow {
   box-shadow: 0px 6px #c4c4c4;
   cursor: pointer;
   transition: box-shadow 0.2s ease;
 }
 
-.lightgrayshadow:active {
+.secondaryshadow:active {
   transform: translateY(2px);
   transition: transform 0.3s ease;
   box-shadow: 0px 2px #c4c4c4;

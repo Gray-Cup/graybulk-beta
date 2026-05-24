@@ -10,19 +10,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary orangeshadow text-primary-foreground shadow-xs cursor-pointer rounded-lg",
-        blue: "bg-primary blueshadow text-primary-foreground shadow-xs cursor-pointer rounded-lg",
-        red: "bg-primary redshadow text-primary-foreground shadow-xs cursor-pointer rounded-lg",
+          "bg-primary text-primary-foreground shadow-xs cursor-pointer rounded-lg",
+        primary: "bg-blue-600 font-semibold text-primary-foreground cursor-pointer rounded-full",
         black:
           "bg-black text-white shadow-xs hover:bg-neutral-900 rounded-lg cursor-pointer",
         gray: "bg-primary grayshadow text-primary-foreground shadow-xs cursor-pointer rounded-lg",
-        lightgray:
-          "bg-primary lightgrayshadow text-primary-foreground shadow-xs cursor-pointer rounded-lg",
-        lightgraybg:
-          "bg-neutral-200 border border-neutral-300 text-neutral-950 shadow-xs cursor-pointer rounded-lg",
+        secondary:
+          "bg-[#EEF0F3] text-[#0A0B0D] font-semibold cursor-pointer rounded-full",
         outline:
           "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground cursor-pointer",
-        secondary: " text-black cursor-pointer",
         ghost: "hover:bg-accent hover:text-accent-foreground cursor-pointer",
         link: "text-primary underline-offset-4 hover:underline",
       },

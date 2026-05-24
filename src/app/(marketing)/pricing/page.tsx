@@ -16,7 +16,7 @@ type Tier = {
   name: string;
   price: string;
   cta: string;
-  ctaVariant?: "default" | "blue" | "red";
+  ctaVariant?: "default" | "primary" | "red";
   features: string[];
   flagText?: string;
 };
@@ -88,7 +88,7 @@ const tiers: Tier[] = [
     name: "Vibe",
     price: "$30",
     cta: "Vibe with Us",
-    ctaVariant: "blue",
+    ctaVariant: "primary",
     features: [
       "Unlimited Customer Agents + 100MB of Context",
       "500MB KnowledgeBase Size(Customer Analysis)",
@@ -129,7 +129,7 @@ const tiers: Tier[] = [
     name: "Companies",
     price: "$900",
     cta: "Unify Your Company",
-    ctaVariant: "blue",
+    ctaVariant: "primary",
     features: [
       "Total Memory Size: 5GB",
       "10GB KnowledgeBase Size(Customer Analysis)",
@@ -182,7 +182,7 @@ export default function PricingPage() {
                     </div>
                     <Button
                       className="w-full h-12 rounded-lg"
-                      variant="lightgray"
+                      variant="secondary"
                     >
                       Get Started
                     </Button>
@@ -212,7 +212,7 @@ export default function PricingPage() {
             <Button variant="default" size="minor">
               Build Your Survey
             </Button>
-            <Button variant="blue" size="minor">
+            <Button variant="primary" size="minor">
               Visual Bug Reporting in IDE
             </Button>
             <Button variant="red" size="minor">
@@ -221,7 +221,7 @@ export default function PricingPage() {
             <Button variant="default" size="minor">
               Discord Customer Bot
             </Button>
-            <Button variant="blue" size="minor">
+            <Button variant="primary" size="minor">
               Run Surveys & Deep Research
             </Button>
             <Button variant="default" size="minor">
@@ -230,10 +230,10 @@ export default function PricingPage() {
             <Button variant="red" size="minor">
               Discord Scraper Agent
             </Button>
-            <Button variant="blue" size="minor">
+            <Button variant="primary" size="minor">
               IDE Customer Agents
             </Button>
-            <Button variant="blue" size="minor">
+            <Button variant="primary" size="minor">
               And More
             </Button>
           </div>
