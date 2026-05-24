@@ -58,7 +58,7 @@ export const HeroCell = ({
         className="flex items-center justify-center w-full h-full rounded-md overflow-hidden"
         style={isColor ? { backgroundColor: character } : undefined}
       >
-        <span className="text-[10px] sm:text-xs font-mono font-medium leading-none select-none text-neutral-700">
+        <span className="text-sm sm:text-base font-mono font-medium leading-none select-none text-neutral-700">
           {isColor ? ' ' : character}
         </span>
       </div>

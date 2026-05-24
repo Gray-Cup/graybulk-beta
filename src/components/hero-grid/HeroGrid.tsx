@@ -206,7 +206,7 @@ export const AnimatedHeroGrid = () => {
           display: 'grid',
           gridTemplateColumns: `repeat(${numberOfColumns}, 1fr)`,
           gridTemplateRows: `repeat(${numberOfRows}, 1fr)`,
-          gap: '3px',
+          gap: '6px',
         }}
         tabIndex={0}
       >
@@ -233,7 +233,7 @@ export const AnimatedHeroGrid = () => {
           display: 'grid',
           gridTemplateColumns: `repeat(${numberOfColumns}, 1fr)`,
           gridTemplateRows: `repeat(${numberOfRows}, 1fr)`,
-          gap: '3px',
+          gap: '6px',
         }}
       >
         <button
