@@ -61,14 +61,14 @@ export default function Error({
         </CardContent>
         <CardFooter className="pt-6 border-t border-dashed mt-6 flex flex-col sm:flex-row flex-wrap gap-2">
           <Button
-            variant="outline"
+            variant="primary"
             className="w-full rounded-none border-dashed"
             onClick={reset}
           >
             <RefreshCw className="mr-2 h-4 w-4" />$ system_restart
           </Button>
           <Button
-            variant="outline"
+            variant="primary"
             className="w-full rounded-none border-dashed"
             asChild
           >

@@ -149,7 +149,7 @@ export function ContactForm() {
             </div>
             <Button
               onClick={() => setSubmissionState("idle")}
-              variant="outline"
+              variant="primary"
               className="mt-4"
             >
               Send Another Message
@@ -309,7 +309,7 @@ export function ContactForm() {
             className="w-full"
             disabled={submissionState === "submitting"}
             size="lg"
-            variant="gray"
+            variant="primary"
           >
             {submissionState === "submitting" ? (
               <>

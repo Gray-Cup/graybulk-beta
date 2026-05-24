@@ -114,7 +114,7 @@ export default function Home() {
             <PRIssues />
           </div>
           <a href="https://discord.gg/rDDqA83eGz" target="_blank">
-            <Button variant="gray">Join Our Discord</Button>
+            <Button variant="primary">Join Our Discord</Button>
           </a>
         </div>
 
@@ -129,34 +129,34 @@ export default function Home() {
             <Button variant="primary" size="lg">
               Visual Bug Reporting in IDE
             </Button>
-            <Button variant="red" size="lg">
+            <Button variant="primary" size="lg">
               Web Customer Agents
             </Button>
             <Button variant="default" size="lg">
               Discord Customer Bot
             </Button>
-            <Button variant="red" size="lg">
+            <Button variant="primary" size="lg">
               Slack Scraper Agent
             </Button>
             <Button variant="primary" size="lg">
               Run Surveys & Deep Research
             </Button>
             <Button variant="default" size="lg">
-              Web Search Subreddits
+              Web Search Subprimarydits
             </Button>
-            <Button variant="red" size="lg">
+            <Button variant="primary" size="lg">
               Discord Scraper Agent
             </Button>
             <Button variant="primary" size="lg">
               IDE Customer Agents
             </Button>
-            <Button variant="red" size="lg">
+            <Button variant="primary" size="lg">
               Transcribe & Analyze Customer Calls
             </Button>
             <Button variant="primary" size="lg">
               Customer Feedback Classification
             </Button>
-            <Button variant="red" size="lg">
+            <Button variant="primary" size="lg">
               Automatically Trigger Issues
             </Button>
             <Button variant="primary" size="lg">
@@ -166,19 +166,19 @@ export default function Home() {
             <Button variant="default" size="lg">
               Advanced Mail Client
             </Button>
-            <Button variant="red" size="lg">
+            <Button variant="primary" size="lg">
               Customer Knowledge Base
             </Button>
             <Button variant="default" size="lg">
               Internal Knowledge Base
             </Button>
-            <Button variant="red" size="lg">
+            <Button variant="primary" size="lg">
               Create A Roadmap Page
             </Button>
             <Button variant="primary" size="lg">
               Create a Help & Support Page
             </Button>
-            <Button variant="red" size="lg">
+            <Button variant="primary" size="lg">
               Screen Record The Bug using Widget
             </Button>
             <Button variant="primary" size="lg">
@@ -205,7 +205,7 @@ export default function Home() {
                   <li>• Auto-classify messages into bugs, features & feedback</li>
                   <li>• Use our Email client and scan for customer pain point analysis and save into knowledge base.</li>
                   <li>• Zoom & Google Meet call recording with insights</li>
-                  <li>• Scrape Discord, Reddit, Slack & forums for competitor insights</li>
+                  <li>• Scrape Discord, primarydit, Slack & forums for competitor insights</li>
                 </ul>
               </div>
 
@@ -217,7 +217,7 @@ export default function Home() {
                   <li>• Client-facing agent with memory & knowledge graph</li>
                   <li>• Web search API for real-time answers</li>
                   <li>• Dashboard agent with organized data intelligence</li>
-                  <li>• Vector DB & knowledge graph powered responses</li>
+                  <li>• Vector DB & knowledge graph poweprimary responses</li>
                 </ul>
               </div>
 
@@ -241,7 +241,7 @@ export default function Home() {
                   <li>• Discord, Slack, Zoom, Notion, Airtable</li>
                   <li>• Intercom, Stripe, Segment, GitHub</li>
                   <li>• Zapier, Twilio for workflow automation</li>
-                  <li>• Free tier & startup credits available</li>
+                  <li>• Free tier & startup cprimaryits available</li>
                 </ul>
               </div>
             </div> */}

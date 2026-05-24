@@ -119,7 +119,7 @@ export function Navbar() {
             </Button>
           ) : showDashboardCTA ? (
             <a href="https://app.graybulk.com">
-              <Button variant="black" size="minor">
+              <Button variant="primary" size="minor">
                 Dashboard
               </Button>
             </a>

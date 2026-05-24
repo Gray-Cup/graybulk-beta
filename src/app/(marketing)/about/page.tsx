@@ -72,7 +72,7 @@ export default function AboutPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" size="sm">
+              <Button variant="primary" size="sm">
                 Twitter
               </Button>
             </a>
@@ -81,7 +81,7 @@ export default function AboutPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" size="sm">
+              <Button variant="primary" size="sm">
                 GitHub
               </Button>
             </a>
@@ -90,7 +90,7 @@ export default function AboutPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline" size="sm">
+              <Button variant="primary" size="sm">
                 LinkedIn
               </Button>
             </a>

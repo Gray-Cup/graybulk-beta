@@ -124,8 +124,7 @@ export default function TeamPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Button variant="outline" size="sm">
-                      <Github className="w-4 h-4 mr-2" />
+                    <Button variant="primary" size="sm">
                       GitHub
                     </Button>
                   </a>
@@ -134,8 +133,7 @@ export default function TeamPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Button variant="outline" size="sm">
-                      <Linkedin className="w-4 h-4 mr-2" />
+                    <Button variant="primary" size="sm">
                       LinkedIn
                     </Button>
                   </a>
@@ -144,7 +142,7 @@ export default function TeamPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Button variant="outline" size="sm">
+                    <Button variant="primary" size="sm">
                       <Twitter className="w-4 h-4 mr-2" />
                       Twitter
                     </Button>
@@ -220,7 +218,7 @@ export default function TeamPage() {
               <Button size="lg">Get in Touch</Button>
             </Link>
             <Link href="/about-arjun">
-              <Button variant="outline" size="lg">
+              <Button variant="primary" size="lg">
                 Learn More About Arjun
               </Button>
             </Link>

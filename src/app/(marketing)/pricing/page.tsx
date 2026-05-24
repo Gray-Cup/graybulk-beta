@@ -16,7 +16,7 @@ type Tier = {
   name: string;
   price: string;
   cta: string;
-  ctaVariant?: "default" | "primary" | "red";
+  ctaVariant?: "default" | "primary" | "secondary";
   features: string[];
   flagText?: string;
 };
@@ -102,7 +102,7 @@ const tiers: Tier[] = [
     name: "Cracked",
     price: "$150",
     cta: "Go Nuts Here",
-    ctaVariant: "red",
+    ctaVariant: "primary",
     features: [
       "Unlimited Customer Agents + 500MB of Context",
       "1GB KnowledgeBase Size(Customer Analysis)",
@@ -215,7 +215,7 @@ export default function PricingPage() {
             <Button variant="primary" size="minor">
               Visual Bug Reporting in IDE
             </Button>
-            <Button variant="red" size="minor">
+            <Button variant="primary" size="minor">
               Web Customer Agents
             </Button>
             <Button variant="default" size="minor">
@@ -227,7 +227,7 @@ export default function PricingPage() {
             <Button variant="default" size="minor">
               Web Search Subreddits
             </Button>
-            <Button variant="red" size="minor">
+            <Button variant="primary" size="minor">
               Discord Scraper Agent
             </Button>
             <Button variant="primary" size="minor">
@@ -257,7 +257,7 @@ export default function PricingPage() {
                       </div>
                     </div>
                     <Link href="/enterprise-contact">
-                      <Button className="w-full h-12 rounded-lg" variant="gray">
+                      <Button className="w-full h-12 rounded-lg" variant="primary">
                         Get in Touch
                       </Button>
                     </Link>
