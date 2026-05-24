@@ -15,7 +15,7 @@ import {
   ProductPrBottomLeft,
   PRIssues,
 } from "@/components/svgs";
-import { CustomerHero } from "@/components/svgs/customer-hero";
+import { AnimatedHeroGrid } from "@/components/hero-grid/HeroGrid";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -82,10 +82,7 @@ export default function Home() {
 
           {/* Right Column */}
           <div className="hidden lg:block">
-            <CustomerHero />
-            <span className="text-xs text-neutral-500 text-end">
-              ps: agent writes the code
-            </span>
+            <AnimatedHeroGrid />
           </div>
         </div>
 
