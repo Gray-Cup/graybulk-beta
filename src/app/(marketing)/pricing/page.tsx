@@ -82,7 +82,6 @@ function PricingCard({
   );
 }
 
-/* ---------- Supplier tier data ---------- */
 const tiers: Tier[] = [
   {
     name: "Free",
@@ -208,17 +207,6 @@ export default function PricingPage() {
               </div>
             </Card>
           </div>
-          <div className="flex-col sm:flex-row flex-wrap hidden lg:flex items-center py-4 gap-4 justify-center">
-            <Button variant="default" size="minor">Supplier Storefronts</Button>
-            <Button variant="primary" size="minor">Automated Settlements</Button>
-            <Button variant="primary" size="minor">Scalable Catalogs</Button>
-            <Button variant="default" size="minor">Buyer Discovery</Button>
-            <Button variant="primary" size="minor">UPI & Net Banking</Button>
-            <Button variant="default" size="minor">Verified Suppliers</Button>
-            <Button variant="primary" size="minor">Wholesale Transactions</Button>
-            <Button variant="primary" size="minor">B2B Payments</Button>
-          </div>
-
           <div className="max-w-sm w-full">
             <Card className="p-0 border border-gray-200 rounded-2xl bg-white">
               <div className="flex flex-col gap-6">
