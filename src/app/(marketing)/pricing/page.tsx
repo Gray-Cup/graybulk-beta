@@ -12,6 +12,10 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import UPILogo from "@/components/cards/upi";
+import MastercardLogo from "@/components/cards/mastercard";
+import VisaLogo from "@/components/cards/visa";
+import RupayLogo from "@/components/cards/rupay";
+import AmexLogo from "@/components/cards/amex";
 
 type Tier = {
   name: string;
@@ -224,11 +228,60 @@ export default function PricingPage() {
   const [billing, setBilling] = useState<"monthly" | "yearly">("yearly");
   const [showLifetime, setShowLifetime] = useState(false);
 
+  const [paymentTab, setPaymentTab] = useState<"upi-net" | "cards">("upi-net");
+
   const [upiOpen, setUpiOpen] = useState(false);
   const [upiAmount, setUpiAmount] = useState(10000);
 
   const [netOpen, setNetOpen] = useState(false);
   const [netAmount, setNetAmount] = useState(1000000);
+
+  const [cardCalcOpen, setCardCalcOpen] = useState(false);
+  const [cardAmount, setCardAmount] = useState(10000);
+  const [cardType, setCardType] = useState("Credit card (Mastercard/Visa/Rupay/Diners)");
+
+  const cardRates: { label: string; rate: string; logos?: React.ReactNode }[] = [
+    {
+      label: "Credit card (Mastercard/Visa/Rupay/Diners)",
+      rate: "1.85%*",
+      logos: (
+        <div className="flex items-center gap-1.5">
+          <MastercardLogo className="h-9 w-auto" />
+          <VisaLogo className="h-9 w-auto" />
+          <RupayLogo className="h-5 w-auto" />
+          <AmexLogo className="h-9 w-auto" />
+        </div>
+      ),
+    },
+    { label: "Credit card (Corporate/Commercial)", rate: "2.25%*" },
+    {
+      label: "Debit card (Mastercard/Visa/Rupay)",
+      rate: "1.80%*",
+      logos: (
+        <div className="flex items-center gap-1.5">
+          <MastercardLogo className="h-9 w-auto" />
+          <VisaLogo className="h-9 w-auto" />
+          <RupayLogo className="h-5 w-auto" />
+        </div>
+      ),
+    },
+    {
+      label: "Debit card (Rupay)",
+      rate: "0.10%*",
+      logos: <RupayLogo className="h-5 w-auto" />,
+    },
+    {
+      label: "Credit card (Rupay) on UPI",
+      rate: "2.00%*",
+      logos: (
+        <div className="flex items-center gap-1.5">
+          <RupayLogo className="h-5 w-auto" />
+          <UPILogo className="h-6 w-auto" />
+        </div>
+      ),
+    },
+    { label: "Creditline & PPI on UPI", rate: "1.90%*", logos: <UPILogo className="h-6 w-auto" /> },
+  ];
 
   return (
     <div className="min-h-screen py-20">
@@ -243,7 +296,6 @@ export default function PricingPage() {
         </div>
 
         <div className="max-w-6xl flex flex-col md:flex-row justify-center items-start max-md:gap-5 md:gap-6 mx-auto">
-          {/* Free (buyers) card */}
           <div className="max-w-sm w-full shrink-0">
             <Card className="p-0 border border-gray-200 rounded-2xl bg-white">
               <div className="flex flex-col gap-6">
@@ -305,8 +357,102 @@ export default function PricingPage() {
             </Card>
           </div>
 
-          {/* Settlement cards in flex-col */}
+
           <div className="flex flex-col gap-4 w-full">
+            <div className="inline-flex self-start rounded-lg border border-gray-200 bg-white p-1 gap-1">
+              <button
+                onClick={() => setPaymentTab("upi-net")}
+                className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                  paymentTab === "upi-net" ? "bg-gray-100 text-black" : "text-muted-foreground hover:text-black"
+                }`}
+              >
+                UPI & Net Banking
+              </button>
+              <button
+                onClick={() => setPaymentTab("cards")}
+                className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                  paymentTab === "cards" ? "bg-gray-100 text-black" : "text-muted-foreground hover:text-black"
+                }`}
+              >
+                Cards
+              </button>
+            </div>
+
+            {paymentTab === "cards" ? (
+              <Card className="p-6 border border-gray-200 rounded-2xl bg-white overflow-hidden">
+                <div className="flex items-start justify-between gap-4">
+                  <span className="text-lg font-semibold">Card Payments</span>
+                  <Button variant="secondary" className="shrink-0" onClick={() => setCardCalcOpen((v) => !v)}>
+                    {cardCalcOpen ? "Hide" : "Calculate Fees"}
+                  </Button>
+                </div>
+                <Separator className="my-3" />
+                <div className="flex flex-col divide-y divide-gray-100">
+                  {cardRates.map(({ label, rate, logos }) => (
+                    <div key={label} className="flex items-center justify-between py-3 text-sm gap-4">
+                      <div className="flex flex-col gap-1.5">
+                        <span className="text-muted-foreground">{label}</span>
+                        {logos && <div>{logos}</div>}
+                      </div>
+                      <span className="font-semibold tabular-nums shrink-0">{rate}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-muted-foreground mt-1">* Exclusive of GST</p>
+                <div
+                  className="grid transition-all duration-500 ease-in-out"
+                  style={{ gridTemplateRows: cardCalcOpen ? "1fr" : "0fr" }}
+                >
+                  <div className="overflow-hidden">
+                    <Separator className="mt-4" />
+                    <div className="flex flex-col gap-3 pt-4">
+                      <div className="flex flex-col gap-1.5">
+                        <span className="text-sm text-muted-foreground">Card type</span>
+                        <select
+                          value={cardType}
+                          onChange={(e) => setCardType(e.target.value)}
+                          className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300"
+                        >
+                          {cardRates.map(({ label }) => (
+                            <option key={label} value={label}>{label}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-muted-foreground">Transaction value</span>
+                        <span className="font-semibold tabular-nums">₹{cardAmount.toLocaleString("en-IN")}</span>
+                      </div>
+                      <input
+                        type="range"
+                        min={1000}
+                        max={500000}
+                        step={1000}
+                        value={cardAmount}
+                        onChange={(e) => setCardAmount(Number(e.target.value))}
+                        className="w-full accent-black"
+                      />
+                      <div className="flex items-center justify-between text-xs text-muted-foreground">
+                        <span>₹1,000</span>
+                        <span>₹5,00,000</span>
+                      </div>
+                      <div className="rounded-xl bg-gray-50 px-4 py-3 flex items-center justify-between text-sm">
+                        <span className="text-muted-foreground">Platform fee</span>
+                        <span className="font-semibold tabular-nums">
+                          ₹{Math.round(cardAmount * (parseFloat(cardRates.find((r) => r.label === cardType)?.rate ?? "0") / 100)).toLocaleString("en-IN")}
+                        </span>
+                      </div>
+                      <div className="rounded-xl bg-gray-50 px-4 py-3 flex items-center justify-between text-sm">
+                        <span className="text-muted-foreground">You receive</span>
+                        <span className="font-semibold tabular-nums">
+                          ₹{(cardAmount - Math.round(cardAmount * (parseFloat(cardRates.find((r) => r.label === cardType)?.rate ?? "0") / 100))).toLocaleString("en-IN")}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ) : (
+              <>
             <Card className="p-6 border border-gray-200 rounded-2xl bg-white overflow-hidden">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex flex-col gap-2">
@@ -405,11 +551,12 @@ export default function PricingPage() {
                 </div>
               </div>
             </Card>
+              </>
+            )}
           </div>
         </div>
 
         <div className="max-w-6xl mx-auto mt-10">
-          {/* Billing toggle */}
           <div className="flex justify-center mb-6">
             <div className="inline-flex rounded-lg border border-gray-200 bg-white p-1 gap-1">
               <button
