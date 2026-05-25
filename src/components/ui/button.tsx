@@ -13,9 +13,9 @@ const buttonVariants = cva(
           "bg-primary text-primary-foreground shadow-xs cursor-pointer rounded-lg",
         primary: "bg-blue-600 hover:bg-blue-600/95 active:scale-95  font-semibold text-primary-foreground cursor-pointer rounded-full",
         secondary:
-          "bg-graybutton text-primary active:scale-95 font-semibold cursor-pointer duration-300 transition rounded-full",
+          "bg-graybutton hover:bg-neutral-200 text-primary active:scale-95 font-semibold cursor-pointer duration-300 transition rounded-full",
         black:
-          "bg-primary active:bg-primary/85 text-white active:scale-95 font-semibold cursor-pointer duration-150 transition rounded-full",
+          "bg-primary hover:bg-primary/85 active:bg-primary/75 text-white active:scale-95 font-semibold cursor-pointer duration-150 transition rounded-full",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {

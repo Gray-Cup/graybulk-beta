@@ -15,6 +15,7 @@ import {
   ProductPrBottomLeft,
   PRIssues,
 } from "@/components/svgs";
+import { CurrencyCircleDollarIcon, StorefrontIcon, ListBulletsIcon, TagIcon } from "@phosphor-icons/react";
 import { AnimatedHeroGrid } from "@/components/hero-grid/HeroGrid";
 import { TwoColLayout, FourCardGrid, Section } from "@/components/layouts";
 
@@ -78,51 +79,26 @@ export default function Home() {
               {
                 title: "Automated Settlements",
                 description: "Sell products. Receive settlements automatically. No manual reconciliation.",
-                icon: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="currentColor" opacity="0.3"/>
-                    <path d="M11 7h2v6h-2zm0 8h2v2h-2z" fill="currentColor"/>
-                    <path d="M12 2v2m0 16v2M2 12h2m16 0h2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5"/>
-                    <path d="M8 12l2.5 2.5L16 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                ),
+                icon: <CurrencyCircleDollarIcon size={32} color="#0433ff" weight="duotone" />,
                 button: { label: "Start Selling", href: "https://app.graybulk.com" },
               },
               {
                 title: "Supplier Storefronts",
                 description: "Build your supplier presence online. Your products, catalog, and company — in one place.",
-                icon: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M9 22V12h6v10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                ),
+                icon: <StorefrontIcon size={32} color="#0433ff" weight="duotone" />,
                 button: { label: "Create Profile", href: "https://app.graybulk.com" },
               },
               {
                 title: "Structured Catalogs",
                 description: "Organize your entire product range with structured listings built for B2B buyers.",
-                icon: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 6h16M4 10h16M4 14h10M4 18h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                    <rect x="14" y="13" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5"/>
-                  </svg>
-                ),
+                icon: <ListBulletsIcon size={32} color="#0433ff" weight="duotone" />,
                 button: { label: "List Products", href: "https://app.graybulk.com" },
               },
               {
                 title: "Low Transaction Fees",
                 description: "0.4% on UPI. Flat ₹230 on net banking. Predictable costs at any volume.",
-                icon: (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2v2m0 16v2M6 12H4m16 0h-2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                    <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.5"/>
-                    <path d="M9 9h4.5a1.5 1.5 0 010 3H10a1.5 1.5 0 000 3H15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                    <path d="M12 7.5V9m0 6v1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                  </svg>
-                ),
-                button: { label: "See Pricing", href: "https://app.graybulk.com" },
+                icon: <TagIcon size={32} color="#0433ff" weight="duotone" />,
+                button: { label: "See Pricing", href: "/pricing" },
               },
             ]}
           />

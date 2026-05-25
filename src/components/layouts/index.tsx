@@ -61,11 +61,11 @@ export function FourCardGrid({
 }) {
   return (
     <div className={cn("flex justify-center", className)}>
-      <div className="grid grid-cols-2 gap-4 w-full max-w-4xl">
+      <div className="grid grid-cols-2 gap-4 w-full max-w-5xl">
         {cards.slice(0, 4).map((card, i) => (
           <div
             key={i}
-            className="border border-neutral-200 bg-card rounded-xl p-6 flex flex-col gap-3"
+            className="bg-card rounded-4xl p-8 flex flex-col gap-5"
           >
             <div className="text-primary">
               {card.icon ?? <ArrowRight className="w-6 h-6" />}
@@ -73,13 +73,13 @@ export function FourCardGrid({
             <h3 className="text-lg font-medium text-primary">
               {card.title}
             </h3>
-            <p className="text-base text-neutral-500 leading-relaxed flex-1">
+            <p className="text-base text-subdesc leading-relaxed flex-1">
               {card.description}
             </p>
             {card.button && (
               <div className="mt-1">
                 {card.button.href ? (
-                  <a href={card.button.href} target="_blank">
+                  <a href={card.button.href}>
                     <Button variant="black" size="sm">{card.button.label}</Button>
                   </a>
                 ) : (
