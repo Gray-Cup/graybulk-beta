@@ -2,7 +2,6 @@
 
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { animated, useSpring, useSprings } from '@react-spring/web';
-import { Pause, Play } from 'lucide-react';
 
 import {
   autoTransitionIntervalMs,
@@ -83,7 +82,6 @@ export const AnimatedHeroGrid = () => {
     messageAccessibilityDescriptions[currentMessageIndexRef.current],
   );
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const [isPeriodicUpdatePaused, setIsPeriodicUpdatePaused] = useState(false);
   const [gridCellSprings, gridCellSpringsRef] = useSprings(
     numberOfRows * numberOfColumns,
     createGridCellSprings({
@@ -126,31 +124,6 @@ export const AnimatedHeroGrid = () => {
     intervalRef.current = setInterval(animateMessage, autoTransitionIntervalMs);
   }, [animateMessage]);
 
-  const handlePauseButtonClick = useCallback(() => {
-    pauseMessageUpdateInterval();
-    setIsPeriodicUpdatePaused(true);
-  }, [pauseMessageUpdateInterval]);
-
-  const handleResumeButtonClick = useCallback(() => {
-    setIsPeriodicUpdatePaused(false);
-    animateMessage();
-    resumeMessageUpdateInterval();
-  }, [animateMessage, resumeMessageUpdateInterval]);
-
-  const handleFullGridFocusChange: React.FocusEventHandler<HTMLDivElement> = useCallback(
-    ({ target, type }) => {
-      if (target !== gridRef.current) return;
-      if (type === 'focus') {
-        pauseMessageUpdateInterval();
-        return;
-      }
-      if (type === 'blur' && !isPeriodicUpdatePaused) {
-        resumeMessageUpdateInterval();
-      }
-    },
-    [isPeriodicUpdatePaused, pauseMessageUpdateInterval, resumeMessageUpdateInterval],
-  );
-
   const handleFullGridKeyDown: React.KeyboardEventHandler<HTMLDivElement> = useCallback(
     (event) => {
       if (event.target !== gridRef.current) return;
@@ -167,17 +140,14 @@ export const AnimatedHeroGrid = () => {
     (cellIndex: number) => {
       pauseMessageUpdateInterval();
       animateMessage(cellIndex);
-      if (!isPeriodicUpdatePaused) resumeMessageUpdateInterval();
+      resumeMessageUpdateInterval();
     },
-    [animateMessage, isPeriodicUpdatePaused, pauseMessageUpdateInterval, resumeMessageUpdateInterval],
+    [animateMessage, pauseMessageUpdateInterval, resumeMessageUpdateInterval],
   );
 
-  const handleCellHoverStart = useCallback(
-    (cellIndex: number) => {
-      if (!isPeriodicUpdatePaused) setHoveredCellIndex(cellIndex);
-    },
-    [isPeriodicUpdatePaused],
-  );
+  const handleCellHoverStart = useCallback((cellIndex: number) => {
+    setHoveredCellIndex(cellIndex);
+  }, []);
 
   const handleCellHoverEnd = useCallback(() => {
     setHoveredCellIndex(null);
@@ -191,70 +161,35 @@ export const AnimatedHeroGrid = () => {
   const totalCells = numberOfRows * numberOfColumns;
 
   return (
-    <div className="relative block">
-      {/* Main grid */}
-      <div
-        ref={gridRef}
-        aria-label={accessibilityDescription}
-        aria-live="polite"
-        className="relative rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900"
-        onBlur={handleFullGridFocusChange}
-        onFocus={handleFullGridFocusChange}
-        onKeyDown={handleFullGridKeyDown}
-        role="button"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: `repeat(${numberOfColumns}, 1fr)`,
-          gridTemplateRows: `repeat(${numberOfRows}, 1fr)`,
-          gap: '6px',
-        }}
-        tabIndex={0}
-      >
-        {gridCellSprings.map(({ charSetIndex }, cellIndex) =>
-          cellIndex < totalCells - 1 ? (
-            <AnimatedHeroCell
-              key={cellIndex}
-              cellIndex={cellIndex}
-              charSetIndex={
-                hoveredCellIndex === cellIndex ? hoverCellSpring.charSetIndex : charSetIndex
-              }
-              onClick={handleCellClick}
-              onHoverEnd={handleCellHoverEnd}
-              onHoverStart={handleCellHoverStart}
-            />
-          ) : null,
-        )}
-      </div>
-
-      {/* Overlay grid for pause button */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: `repeat(${numberOfColumns}, 1fr)`,
-          gridTemplateRows: `repeat(${numberOfRows}, 1fr)`,
-          gap: '6px',
-        }}
-      >
-        <button
-          aria-label={isPeriodicUpdatePaused ? 'Play message' : 'Pause message'}
-          aria-live="polite"
-          className="pointer-events-auto aspect-square bg-neutral-100 rounded-md flex items-center justify-center border-0 cursor-pointer hover:bg-neutral-200 transition-colors"
-          onClick={isPeriodicUpdatePaused ? handleResumeButtonClick : handlePauseButtonClick}
-          style={{
-            gridColumnStart: numberOfColumns,
-            gridColumnEnd: numberOfColumns + 1,
-            gridRowStart: numberOfRows,
-            gridRowEnd: numberOfRows + 1,
-          }}
-        >
-          {isPeriodicUpdatePaused ? (
-            <Play className="w-2.5 h-2.5 text-neutral-500" />
-          ) : (
-            <Pause className="w-2.5 h-2.5 text-neutral-500" />
-          )}
-        </button>
-      </div>
+    <div
+      ref={gridRef}
+      aria-label={accessibilityDescription}
+      aria-live="polite"
+      className="rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900"
+      onKeyDown={handleFullGridKeyDown}
+      role="button"
+      style={{
+        display: 'grid',
+        gridTemplateColumns: `repeat(${numberOfColumns}, 1fr)`,
+        gridTemplateRows: `repeat(${numberOfRows}, 1fr)`,
+        gap: '8px',
+      }}
+      tabIndex={0}
+    >
+      {gridCellSprings.map(({ charSetIndex }, cellIndex) =>
+        cellIndex < totalCells ? (
+          <AnimatedHeroCell
+            key={cellIndex}
+            cellIndex={cellIndex}
+            charSetIndex={
+              hoveredCellIndex === cellIndex ? hoverCellSpring.charSetIndex : charSetIndex
+            }
+            onClick={handleCellClick}
+            onHoverEnd={handleCellHoverEnd}
+            onHoverStart={handleCellHoverStart}
+          />
+        ) : null,
+      )}
     </div>
   );
 };

@@ -48,34 +48,26 @@ export default function Home() {
           {/* Left Column */}
           <div>
             <div>
-              <span className="mb-4 sm:ml-4 text-sm font-semibold text-neutral-600">
-                Gray Bulk Beta
-              </span>
               <h1 className="relative text-black text-3xl sm:text-5xl lg:text-6xl font-medium sm:leading-[60px] lg:leading-[77px]">
-                Collect, Analyze,
+                Built for Indian
                 <br />
-                <span className="absolute -translate-y-16 translate-x-96 lg:translate-x-122 ">
-                  <ProductPrBottomLeft />
-                </span>
-                and <span>Improve Product</span>.
-                <br />
-                With Customer Agents.
-                <span className="absolute max-sm:translate-y-3  max-sm:-translate-x-2 sm:-translate-x-24 md:-translate-x-2  xl:-translate-x-10 translate-y-10 md:translate-y-12">
-                  <ToDo />
-                </span>
+                Wholesale Commerce.
               </h1>
+              <p className="mt-5 text-base sm:text-lg text-neutral-500 max-w-lg">
+                Suppliers, manufacturers, and distributors sell wholesale products online — with structured catalogs, automated settlements, and scalable storefronts.
+              </p>
             </div>
 
             <div className="flex relative mt-10 flex-col max:smml-4 ">
               <div>
                 <a href="https://app.graybulk.com" target="_blank">
                   <Button variant="primary" size="sm">
-                    Get started
+                    Start Selling
                   </Button>
                 </a>
-                <div className="absolute translate-x-20">
+                {/* <div className="absolute translate-x-20">
                   <CreateAgent />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -92,99 +84,28 @@ export default function Home() {
 
         <div className="my-20 flex flex-col md:items-center px-6 py-10 md:py-20 bg-neutral-50 md:grid md:grid-cols-[70%_30%]">
           <div>
-                      <div className="block md:hidden max-md:pb-5">
-            <PRIssues />
-          </div>
+            <div className="block md:hidden max-md:pb-5">
+              <PRIssues />
+            </div>
             <h2 className="text-2xl sm:text-5xl font-medium text-neutral-900 mb-6 font-instrument-sans">
-              Gray Bulk Narrative
+              Commerce infrastructure for Indian wholesale.
             </h2>
             <p className="text-md sm:text-xl mb-10 text-neutral-700 my-4 max-w-2xl">
-              Allow the customers to have autonomy to get help with bugs,
-              outdated documentation, feature requests, etc. As Fast as Possible
-              to reach Resolution.
+              Most Indian B2B trade still happens over WhatsApp, Excel sheets,
+              and phone calls. Gray Bulk brings it online — with structured
+              catalogs, automated settlements, and supplier storefronts built
+              to scale.
               <br />
               <br />
-              Customers shouldn't shout into the void.
+              Less paperwork. Faster transactions. No middlemen.
             </p>
           </div>
           <div className="hidden md:block">
             <PRIssues />
           </div>
-          <a href="https://discord.gg/rDDqA83eGz" target="_blank">
-            <Button variant="primary">Join Our Discord</Button>
+          <a href="https://app.graybulk.com" target="_blank">
+            <Button variant="primary">Create Supplier Profile</Button>
           </a>
-        </div>
-
-        <div className="flex flex-col items-center justify-center min-h-screen my-10">
-          <h2 className="text-3xl font-semibold text-neutral-900 mb-6 flex justify-center flex-row items-center gap-4 font-instrument-sans">
-            External & Internal Agents → KnowledgeBase
-          </h2>
-          <div className="flex-col sm:flex-row flex-wrap hidden lg:flex items-center py-4 gap-4 justify-center">
-            <Button variant="default" size="lg">
-              Build Your Survey
-            </Button>
-            <Button variant="primary" size="lg">
-              Visual Bug Reporting in IDE
-            </Button>
-            <Button variant="primary" size="lg">
-              Web Customer Agents
-            </Button>
-            <Button variant="default" size="lg">
-              Discord Customer Bot
-            </Button>
-            <Button variant="primary" size="lg">
-              Slack Scraper Agent
-            </Button>
-            <Button variant="primary" size="lg">
-              Run Surveys & Deep Research
-            </Button>
-            <Button variant="default" size="lg">
-              Web Search Subprimarydits
-            </Button>
-            <Button variant="primary" size="lg">
-              Discord Scraper Agent
-            </Button>
-            <Button variant="primary" size="lg">
-              IDE Customer Agents
-            </Button>
-            <Button variant="primary" size="lg">
-              Transcribe & Analyze Customer Calls
-            </Button>
-            <Button variant="primary" size="lg">
-              Customer Feedback Classification
-            </Button>
-            <Button variant="primary" size="lg">
-              Automatically Trigger Issues
-            </Button>
-            <Button variant="primary" size="lg">
-              Integrate with Zapier, Airtable, Notion, Github, Gitlab, Jira,
-              etc.
-            </Button>
-            <Button variant="default" size="lg">
-              Advanced Mail Client
-            </Button>
-            <Button variant="primary" size="lg">
-              Customer Knowledge Base
-            </Button>
-            <Button variant="default" size="lg">
-              Internal Knowledge Base
-            </Button>
-            <Button variant="primary" size="lg">
-              Create A Roadmap Page
-            </Button>
-            <Button variant="primary" size="lg">
-              Create a Help & Support Page
-            </Button>
-            <Button variant="primary" size="lg">
-              Screen Record The Bug using Widget
-            </Button>
-            <Button variant="primary" size="lg">
-              Component Behavior Reporting via Web
-            </Button>
-            <Button variant="primary" size="lg">
-              Whatsapp & Instagram Agents
-            </Button>
-          </div>
         </div>
         {/* <p className="text-center text-sm text-muted-foreground">would love to buy coldrun.ai but it's costly. ps: this platform is work in progress</p> */}
       </div>

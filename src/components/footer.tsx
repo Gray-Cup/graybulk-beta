@@ -10,9 +10,7 @@ export default function Footer() {
           <Logo className="h-10 w-auto" />
             <h3 className="font-semibold text-lg mb-1.5 mt-4">Gray Bulk</h3>
             <p className="text-muted-foreground text-sm">
-              Perfect Combination of Scanning, Customer Experience and Knowledge
-              Base.
-              <br />
+              Commerce infrastructure for Indian wholesale. Built for suppliers, manufacturers, and distributors.
             </p>
           </div>
           <div>

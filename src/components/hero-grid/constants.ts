@@ -58,6 +58,6 @@ export const messageAccessibilityDescriptions = messages.map(
       .join(' ')}. Press Enter or Space to skip to the next message.`,
 );
 
-export const autoTransitionIntervalMs = 10000;
+export const autoTransitionIntervalMs = 5000;
 export const gridCellDistanceDelayMs = 80;
 export const maxUpdatesPerSecond = 20;
