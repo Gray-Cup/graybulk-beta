@@ -82,7 +82,7 @@ export function Navbar() {
 
           
           <Logo className="h-10 w-auto" />
-          <h1 className="font-semibold text-2xl text-[#0A0B0D]">Gray Bulk</h1>
+          <h1 className="font-semibold text-2xl text-primary">Gray Bulk</h1>
           </Link>
           <nav className="hidden font-medium text-lg md:flex pl-3 gap-1">
             <Link
@@ -128,7 +128,7 @@ export function Navbar() {
               {/* Internal route: use Link + asChild so it doesn't flash a reload */}
               <Link href="/play-with-us" className="inline-block">
                 <Button variant="secondary" size="sm">
-                  Play with Us
+                  Sign Up
                 </Button>
               </Link>
 

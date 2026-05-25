@@ -16,6 +16,7 @@ import {
   PRIssues,
 } from "@/components/svgs";
 import { AnimatedHeroGrid } from "@/components/hero-grid/HeroGrid";
+import { TwoColLayout, FourCardGrid, Section } from "@/components/layouts";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -44,9 +45,8 @@ export default function Home() {
   return (
     <div className="mx-auto px-4 lg:px-6 h-auto my-10">
       <div className="md:min-h-screen pt-10 pb-20 md:pb-0 flex flex-col justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-[70%_30%] gap-6 items-center">
-          {/* Left Column */}
-          <div>
+        <TwoColLayout
+          left={
             <div>
               <h1 className="relative text-black text-3xl sm:text-5xl lg:text-6xl font-medium sm:leading-[60px] lg:leading-[77px]">
                 Built for Indian
@@ -56,57 +56,109 @@ export default function Home() {
               <p className="mt-5 text-base sm:text-lg text-neutral-500 max-w-lg">
                 Suppliers, manufacturers, and distributors sell wholesale products online — with structured catalogs, automated settlements, and scalable storefronts.
               </p>
-            </div>
-
-            <div className="flex relative mt-10 flex-col max:smml-4 ">
-              <div>
+              <div className="flex relative mt-10 flex-col">
                 <a href="https://app.graybulk.com" target="_blank">
                   <Button variant="primary" size="sm">
                     Start Selling
                   </Button>
                 </a>
-                {/* <div className="absolute translate-x-20">
-                  <CreateAgent />
-                </div> */}
               </div>
             </div>
-          </div>
-
-          {/* Right Column */}
-          <div className="hidden lg:block">
-            <AnimatedHeroGrid />
-          </div>
-        </div>
-
-        <div className="my-20 py-20 bg-neutral-100">
-          <h2 className="text-5xl font-medium text-neutral-900 mb-6 flex justify-center flex-row items-center gap-4 font-instrument-sans"></h2>
-        </div>
-
-        <div className="my-20 flex flex-col md:items-center px-6 py-10 md:py-20 bg-neutral-50 md:grid md:grid-cols-[70%_30%]">
-          <div>
-            <div className="block md:hidden max-md:pb-5">
-              <PRIssues />
+          }
+          right={
+            <div className="hidden lg:block">
+              <AnimatedHeroGrid />
             </div>
-            <h2 className="text-2xl sm:text-5xl font-medium text-neutral-900 mb-6 font-instrument-sans">
-              Commerce infrastructure for Indian wholesale.
-            </h2>
-            <p className="text-md sm:text-xl mb-10 text-neutral-700 my-4 max-w-2xl">
-              Most Indian B2B trade still happens over WhatsApp, Excel sheets,
-              and phone calls. Gray Bulk brings it online — with structured
-              catalogs, automated settlements, and supplier storefronts built
-              to scale.
-              <br />
-              <br />
-              Less paperwork. Faster transactions. No middlemen.
-            </p>
-          </div>
-          <div className="hidden md:block">
-            <PRIssues />
-          </div>
-          <a href="https://app.graybulk.com" target="_blank">
-            <Button variant="primary">Create Supplier Profile</Button>
-          </a>
-        </div>
+          }
+        />
+
+        <Section>
+          <FourCardGrid
+            cards={[
+              {
+                title: "Automated Settlements",
+                description: "Sell products. Receive settlements automatically. No manual reconciliation.",
+                icon: (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="currentColor" opacity="0.3"/>
+                    <path d="M11 7h2v6h-2zm0 8h2v2h-2z" fill="currentColor"/>
+                    <path d="M12 2v2m0 16v2M2 12h2m16 0h2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5"/>
+                    <path d="M8 12l2.5 2.5L16 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+                button: { label: "Start Selling", href: "https://app.graybulk.com" },
+              },
+              {
+                title: "Supplier Storefronts",
+                description: "Build your supplier presence online. Your products, catalog, and company — in one place.",
+                icon: (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9 22V12h6v10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ),
+                button: { label: "Create Profile", href: "https://app.graybulk.com" },
+              },
+              {
+                title: "Structured Catalogs",
+                description: "Organize your entire product range with structured listings built for B2B buyers.",
+                icon: (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6h16M4 10h16M4 14h10M4 18h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    <rect x="14" y="13" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+                  </svg>
+                ),
+                button: { label: "List Products", href: "https://app.graybulk.com" },
+              },
+              {
+                title: "Low Transaction Fees",
+                description: "0.4% on UPI. Flat ₹230 on net banking. Predictable costs at any volume.",
+                icon: (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2v2m0 16v2M6 12H4m16 0h-2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.5"/>
+                    <path d="M9 9h4.5a1.5 1.5 0 010 3H10a1.5 1.5 0 000 3H15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M12 7.5V9m0 6v1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                ),
+                button: { label: "See Pricing", href: "https://app.graybulk.com" },
+              },
+            ]}
+          />
+        </Section>
+
+        <Section className="bg-neutral-50 px-6">
+          <TwoColLayout
+            left={
+              <div>
+                <div className="block md:hidden max-md:pb-5">
+                  <PRIssues />
+                </div>
+                <h2 className="text-2xl sm:text-5xl font-medium text-neutral-900 mb-6 font-instrument-sans">
+                  Commerce infrastructure for Indian wholesale.
+                </h2>
+                <p className="text-md sm:text-xl mb-10 text-neutral-700 my-4 max-w-2xl">
+                  Most Indian B2B trade still happens over WhatsApp, Excel sheets,
+                  and phone calls. Gray Bulk brings it online — with structured
+                  catalogs, automated settlements, and supplier storefronts built
+                  to scale.
+                  <br />
+                  <br />
+                  Less paperwork. Faster transactions. No middlemen.
+                </p>
+                <a href="https://app.graybulk.com" target="_blank">
+                  <Button variant="primary">Create Supplier Profile</Button>
+                </a>
+              </div>
+            }
+            right={
+              <div className="hidden md:block">
+                <PRIssues />
+              </div>
+            }
+          />
+        </Section>
         {/* <p className="text-center text-sm text-muted-foreground">would love to buy coldrun.ai but it's costly. ps: this platform is work in progress</p> */}
       </div>
 
