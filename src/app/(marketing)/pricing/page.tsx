@@ -377,7 +377,7 @@ export default function PricingPage() {
                 <button
                   onClick={() => { setRegionTab("domestic"); setPaymentTab("upi-net"); }}
                   className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                    regionTab === "domestic" ? "bg-gray-100 text-black" : "text-muted-foreground hover:text-black"
+                    regionTab === "domestic" ? "bg-blue-600 text-white" : "text-muted-foreground hover:text-black"
                   }`}
                 >
                   Domestic
@@ -385,7 +385,7 @@ export default function PricingPage() {
                 <button
                   onClick={() => { setRegionTab("international"); setPaymentTab("wire"); }}
                   className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                    regionTab === "international" ? "bg-gray-100 text-black" : "text-muted-foreground hover:text-black"
+                    regionTab === "international" ? "bg-blue-600 text-white" : "text-muted-foreground hover:text-black"
                   }`}
                 >
                   International
@@ -398,7 +398,7 @@ export default function PricingPage() {
                     <button
                       onClick={() => setPaymentTab("upi-net")}
                       className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                        paymentTab === "upi-net" ? "bg-gray-100 text-black" : "text-muted-foreground hover:text-black"
+                        paymentTab === "upi-net" ? "bg-[#FF5A00] text-white" : "text-muted-foreground hover:text-black"
                       }`}
                     >
                       UPI & Net Banking
@@ -406,7 +406,7 @@ export default function PricingPage() {
                     <button
                       onClick={() => setPaymentTab("cards")}
                       className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                        paymentTab === "cards" ? "bg-gray-100 text-black" : "text-muted-foreground hover:text-black"
+                        paymentTab === "cards" ? "bg-[#FF5A00] text-white" : "text-muted-foreground hover:text-black"
                       }`}
                     >
                       Cards
@@ -417,7 +417,7 @@ export default function PricingPage() {
                     <button
                       onClick={() => setPaymentTab("wire")}
                       className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                        paymentTab === "wire" ? "bg-gray-100 text-black" : "text-muted-foreground hover:text-black"
+                        paymentTab === "wire" ? "bg-[#FF5A00] text-white" : "text-muted-foreground hover:text-black"
                       }`}
                     >
                       Wire Transfer
@@ -425,7 +425,7 @@ export default function PricingPage() {
                     <button
                       onClick={() => setPaymentTab("cards")}
                       className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                        paymentTab === "cards" ? "bg-gray-100 text-black" : "text-muted-foreground hover:text-black"
+                        paymentTab === "cards" ? "bg-[#FF5A00] text-white" : "text-muted-foreground hover:text-black"
                       }`}
                     >
                       Cards
